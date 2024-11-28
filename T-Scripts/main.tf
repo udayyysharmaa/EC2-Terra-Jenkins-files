@@ -1,11 +1,3 @@
-provider "aws" {
-  region = "ap-south-1"
-  access_key= "XXXXXXXXXXXXXXX"
-  secret_key= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-  
-  
-}
-
 variable vpc_cidr_block {}
 variable subnet_1_cidr_block {}
 variable env_prefix {}
@@ -118,8 +110,8 @@ resource "aws_default_security_group" "default-sg" {
 
 
 resource "aws_key_pair" "ssh-key" {
-  key_name   = "myapp-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYlDlr8hgHkKBNqu2m0g6qWbIXGmss5vWTc8ZjYMqxJv5sYX+kNkkeyn2wC06KSWKQ8DpAE6dGnhlsWmc2/ZXjPKjCkx6ne4axdRU1vXIeC7Dq5T9gsdilbL0oRF7UJyE8oXs6xR66i8Kdaujwo5wSMihcVIkUVUqXYZCKm+gnPQLMAUcvXO2coCR8GH4tr7SssfGsEGubDjEFFr0tOKYW2qOV7Pj/69X3Vasqys2HtegXAXWjShSb1zN3LPmMOdYLs6AG4V0wJH2geQ/i97FVSk7O5CpmYByAkXVuPbRtoXQgb1PcbhZMQi2WPDlCP3HcRoB3rnds9nYm0eKtUXQHQmiCIi1YPAdqRvpyGdfoq9S4X/YmjTgOAvwcAmK24saDTjYbmOAkjhEOh+tEtxGs/358L1QzQpatt0pCieZqyXgzpVosTWc9QoZhew0RtaZ9eVL2+rwhxavrhZU/oxpUHj50892YzsthPtRjxZOelk/H8gV7/TlFZhHTkB6V1Gk= ubuntu@ip-172-31-43-43"
+  key_name   = "terra-jenkins"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICpkUUl/ZBt/ybHcr9EAg16L4Ib17RZVK+voJVTilJSK ubuntu@ip-172-31-44-134"
 
 }
 
