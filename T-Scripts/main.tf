@@ -111,7 +111,7 @@ resource "aws_default_security_group" "default-sg" {
 
 resource "aws_key_pair" "ssh-key" {
   key_name   = "terra-jenkins"
-  public_key = file("/home/ubuntu/terra-jenkins.pub")
+  public_key = file("./terra-jenkins.pub")
 
 }
 
