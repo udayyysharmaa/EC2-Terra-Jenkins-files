@@ -111,7 +111,11 @@ resource "aws_default_security_group" "default-sg" {
 
 resource "aws_key_pair" "ssh-key" {
   key_name   = "terra-jenkins"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICpkUUl/ZBt/ybHcr9EAg16L4Ib17RZVK+voJVTilJSK ubuntu@ip-172-31-44-134"
+  public_key = "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACAqZFFJf2Qbf8mx3K/RAINei+CG9e0WVSvr6CVU4pSUigAAAKBLhwAiS4cA
+IgAAAAtzc2gtZWQyNTUxOQAAACAqZFFJf2Qbf8mx3K/RAINei+CG9e0WVSvr6CVU4pSUig
+AAAECkdHJFfvYvhvUoNgQ2l5zxz9nT3VEHv+D8/ZDDDvUg9CpkUUl/ZBt/ybHcr9EAg16L
+4Ib17RZVK+voJVTilJSKAAAAF3VidW50dUBpcC0xNzItMzEtNDQtMTM0AQIDBAUG"
 
 }
 
