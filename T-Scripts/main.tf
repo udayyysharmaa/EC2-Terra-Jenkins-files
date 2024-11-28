@@ -109,8 +109,8 @@ resource "aws_default_security_group" "default-sg" {
 }
 
 
-resource "aws_key_pair" "ssh-key" {
-  key_name   = "my_key"
+resource "aws_key_pair" "my_key_pair" {
+  key_name   = "terra-jenkins"
   public_key = file("./terra-jenkins.pub")
 
 }
@@ -122,7 +122,7 @@ output "server-ip" {
 resource "aws_instance" "myapp-server" {
   ami                         = data.aws_ami.amazon-linux-image.id
   instance_type               = var.instance_type
-  key_name                    = aws_key_pair.ssh-key.key_name
+  key_name                    = aws_key_pair.my_key_pair.key_name
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.myapp-subnet-1.id
   vpc_security_group_ids      = [aws_default_security_group.default-sg.id]
